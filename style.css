@@ -18,6 +18,8 @@ section{
     left: 35px;
     background-color: red;
     width: 100px;
+    z-index: 999;
+    display: none;
 }
 #image_uploader ul{
     list-style: none;

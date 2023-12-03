@@ -4,7 +4,6 @@ const upload_image=document.getElementById('upload_image')
 const list=document.getElementById('list');
 const allUsers=Array.from(list.getElementsByTagName('li'));
 const icon=document.querySelector('.menu_bar').getElementsByTagName('i')[0]
-console.log(icon)
 
 icon.addEventListener('click',()=>{
     if(parent.style.display=='none'){
@@ -15,7 +14,7 @@ icon.addEventListener('click',()=>{
     }
 })
 
-
+console.log(upload_image.style.src)
 
 
 upload_button.addEventListener('click',()=>{
@@ -32,9 +31,8 @@ upload_button.addEventListener('click',()=>{
 
 allUsers.forEach(element => {
     element.addEventListener('click',(e)=>{
-        // console.log(e.target.innerText)
-        const u_name=e.target.innerText;
-        upload_image.src=`./${u_name}.jpg`
+        console.log(e.target.innerText)
+        upload_image.src=`./${e.target.innerText}.jpg`
     })
 });
 
